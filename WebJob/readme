@@ -1,1 +1,5 @@
+The AzureWebJobsDashboard connection string is your Azure Storage Account used by the Azure SDK to store logs used by the WebJobs dashboard.
 
+The AzureWebJobsStorage connection string is your Azure Storage Account that is used to by the SDK to do things like trigger when a file is uploaded to blob storage or a message is added to a queue. It sounds like you may not need this though if you are only using Service Bus Queues. If this is the case for you, then you could use the same connection string that you use for the AzureWebJobsDashboard. Generally, you would use two different storage accounts so that one is used for dashboard logging and the other is used for application functionality (queues, tables, blobs).
+
+The connection string is available in the Azure Management Portal (classic) by click on Storage in the left navigation, highlight the storage account you want to use, and then click the Manage Access Keys button at the bottom of the page.
